@@ -10,7 +10,7 @@ android {
         targetSdk 34
         versionCode 1
         versionName '1.0.0'
-        resValue 'string', 'zweb_default_url', '"https://frizovdanyash.github.io/zweb/"'
+        resValue 'string', 'zweb_default_url', '"https://appassets.androidplatform.net/assets/public/index.html"'
     }
 
     buildTypes {
@@ -28,6 +28,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+}
+
+def webAssetsDir = file("${projectDir}/src/main/assets/public")
+
+tasks.register('copyWebAssets', Copy) {
+    from "${rootDir}/../public"
+    into webAssetsDir
+}
+
+tasks.named('preBuild') {
+    dependsOn 'copyWebAssets'
 }
 
 configurations.all {

@@ -24,6 +24,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewAssetLoader;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return openExternallyIfNeeded(Uri.parse(url));
+            }
+
+            @Override
+            public android.webkit.WebResourceResponse shouldInterceptRequest(
+                WebView view, WebResourceRequest request) {
+                return assetLoader.shouldInterceptRequest(request.getUrl());
             }
 
             @Override
@@ -146,7 +153,13 @@ public class MainActivity extends AppCompatActivity {
             .edit().putString(KEY_URL, url).apply();
     }
 
+    private WebViewAssetLoader assetLoader;
+
     private void configureWebView() {
+        assetLoader = new WebViewAssetLoader.Builder()
+            .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
+            .build();
+
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
@@ -255,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
             if(host.equals(own) || host.endsWith("." + own)) return true;
         }
 
+        if(host.equals("appassets.androidplatform.net")) return true;
         if(host.equals("t.me") || host.endsWith(".t.me")) return true;
         if(host.equals("telegram.me") || host.endsWith(".telegram.me")) return true;
         if(host.equals("localhost") || host.equals("10.0.2.2")) return true;
