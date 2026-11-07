@@ -1,0 +1,3 @@
+//# allFunctionsCalledOnLoad
+import{p as e}from"./userAgent-B6yJi1mw.js";import{n as t}from"./rootScope-C9WOHXc1.js";import{x as n}from"./solid-B0Du5GQu.js";import{r,t as i}from"./setDeepProperty-BkdiusWR.js";import{n as a,o}from"./store-CT-NUIEH.js";function s(e,t){let n=Array.isArray(t)?t:r(t),i=e;for(let e of n)if(i=i?.[e],!i)break;return i}var[c,l]=n(()=>a({})),u=!1,d=(...e)=>{let n=e.slice(0,-1);l(...e);let r=s(o(c),n);return u?Promise.resolve():t.managers.appStateManager.setByKey(i(`settings`,...n),r)},f=(...e)=>{let t=e[0];typeof t==`object`?l(t):(u=!0,d(...e),u=!1)},p=()=>[c,d];e&&(e.useAppSettings=p);export{s as a,p as i,d as n,f as r,c as t};
+//# sourceMappingURL=appSettings-WuHqiM7v.js.map

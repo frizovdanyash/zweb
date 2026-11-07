@@ -1,0 +1,134 @@
+// zWeb: фирменные правила. Классы на <html> ставит @lib/zweb/markup.
+
+:root {
+  --zweb-avatar-radius: 50%;
+  --zweb-section-radius: 8px;
+  --zweb-accent: #8b5cf6;
+  --zweb-accent-dark: #6d28d9;
+  --zweb-bg: #0b0613;
+}
+
+// ─── Аватарки: радиус из настроек ───────────────────────────────────────────
+.avatar,
+.peer-avatar,
+.avatar-like,
+.avatar-photo,
+.avatar-full,
+.dialog-avatar,
+.chatlist-avatar,
+.person-avatar {
+  border-radius: var(--zweb-avatar-radius) !important;
+}
+
+.zweb-square-avatars {
+  .is-forum,
+  .is-monoforum {
+    border-radius: 0 !important;
+  }
+}
+
+// ─── Секции настроек ────────────────────────────────────────────────────────
+.zweb-sections-rounded {
+  .sidebar-left-section-content,
+  .sidebar-left-section {
+    border-radius: var(--zweb-section-radius);
+  }
+
+  .sidebar-left-section-content {
+    overflow: hidden;
+  }
+}
+
+// ─── Элементы списков в стиле Material ──────────────────────────────────────
+.zweb-m3 {
+  .row {
+    min-height: 3.5rem;
+  }
+
+  .sidebar-left-section-content > .row {
+    &:first-child {
+      border-start-start-radius: var(--zweb-section-radius);
+      border-start-end-radius: var(--zweb-section-radius);
+    }
+
+    &:last-child {
+      border-end-start-radius: var(--zweb-section-radius);
+      border-end-end-radius: var(--zweb-section-radius);
+    }
+  }
+}
+
+// ─── Без хвостика у пузырей ─────────────────────────────────────────────────
+.zweb-no-tail {
+  .bubble.is-out .bubble-content {
+    border-end-end-radius: 1rem;
+  }
+}
+
+// ─── Скрытие элементов шапки и списка ───────────────────────────────────────
+.zweb-hide-search {
+  .sidebar-header .input-search,
+  .sidebar-header .input-search-input {
+    display: none !important;
+  }
+}
+
+.zweb-hide-stories {
+  .stories-list,
+  .story-list {
+    display: none !important;
+  }
+}
+
+.zweb-hide-fab {
+  .new-message,
+  .btn-new-message {
+    display: none !important;
+  }
+}
+
+.zweb-center-title {
+  .sidebar-header .peer-title,
+  .topbar .peer-title {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+// ─── Снежинки ───────────────────────────────────────────────────────────────
+.zweb-snow {
+  .sidebar-header::after,
+  .topbar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(2px 2px at 20% 0%, rgba(255, 255, 255, .8), transparent),
+      radial-gradient(2px 2px at 70% 10%, rgba(255, 255, 255, .6), transparent),
+      radial-gradient(1.5px 1.5px at 45% 30%, rgba(255, 255, 255, .7), transparent),
+      radial-gradient(1.5px 1.5px at 85% 55%, rgba(255, 255, 255, .55), transparent),
+      radial-gradient(2px 2px at 10% 75%, rgba(255, 255, 255, .5), transparent);
+    animation: zweb-snow-fall 12s linear infinite;
+    opacity: .7;
+  }
+}
+
+@keyframes zweb-snow-fall {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100%); }
+}
+
+// ─── Мелкие элементы, которые zWeb добавляет сам ────────────────────────────
+.zweb-input-popup-description {
+  margin: .5rem 1rem 1rem;
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-14);
+  color: var(--secondary-text-color);
+}
+
+.zweb-plugin-code-input {
+  min-height: 8rem;
+  font-family: monospace;
+  white-space: pre-wrap;
+}

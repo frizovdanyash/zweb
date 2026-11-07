@@ -1,0 +1,23 @@
+/**
+ * @name        Фильтр слов
+ * @id          word-filter
+ * @version     1.0.0
+ * @author      zWeb
+ * @description Пишет в журнал сообщения с запрещённым словом
+ * @permissions messages.read
+ */
+
+module.exports = {
+  onLoad(api) {
+    const banned = (api.settings.get('banned') || 'реклама').toLowerCase();
+
+    api.messages.onNew((message) => {
+      const text = message?.message?.text;
+      if(!text) return;
+      if(text.toLowerCase().includes(banned)) {
+        api.ui.toast('Поймано: ' + text.slice(0, 40));
+      }
+    });
+  },
+  onUnload() {}
+};

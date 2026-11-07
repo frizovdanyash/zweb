@@ -1,0 +1,14 @@
+/**
+ * @name        Приветствие
+ * @id          hello
+ * @version     1.0.0
+ * @author      zWeb
+ * @description Показывает приветствие при запуске
+ */
+
+module.exports = {
+  onLoad(api) {
+    api.ui.toast('Привет от zWeb 👋');
+  },
+  onUnload() {}
+};

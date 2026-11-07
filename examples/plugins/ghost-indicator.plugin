@@ -1,0 +1,23 @@
+/**
+ * @name        Индикатор режима призрака
+ * @id          ghost-indicator
+ * @version     1.0.0
+ * @author      zWeb
+ * @description Напоминает, что включён режим призрака
+ */
+
+module.exports = {
+  onLoad(api) {
+    const off = api.on('history_append', () => {
+      if(!api.storage.get('notified')) {
+        api.storage.set('notified', '1');
+        api.ui.toast('Режим призрака включён: «прочитано» не отправляется');
+      }
+    });
+
+    this.dispose = off;
+  },
+  onUnload() {
+    if(this.dispose) this.dispose();
+  }
+};

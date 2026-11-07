@@ -1,0 +1,7 @@
+.git
+node_modules
+src
+dist
+e2e
+*.md
+!README.md

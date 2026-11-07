@@ -1,0 +1,3 @@
+//# allFunctionsCalledOnLoad
+import{n as e}from"./rolldown-runtime-BJUb_-bc.js";import{r as t}from"./matchUrlProtocol-B60iDIRi.js";import{t as n}from"./setBlankToAnchor-3oyk5byX.js";import{t as r}from"./isSuspiciousUrl-UF1pnxnp.js";var i=e({default:()=>a});function a(e){e=t(e);let i=window.showMaskedAlert;if(i&&r(e)){let t=n(document.createElement(`a`));t.href=e,i(t)}else window.open(e,`_blank`,`noreferrer`)}export{i as n,a as t};
+//# sourceMappingURL=safeWindowOpen-DLOpLIH-.js.map
