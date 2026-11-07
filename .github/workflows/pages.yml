@@ -25,6 +25,8 @@ jobs:
 
       - name: Включить Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Загрузить готовую сборку
         uses: actions/upload-pages-artifact@v3

@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  actions: read
 
 jobs:
   apk:
@@ -24,11 +23,27 @@ jobs:
         with:
           gradle-version: '8.7'
 
+      - name: Android SDK
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          ls "$ANDROID_HOME/platforms" || true
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-34" "build-tools;34.0.0" > /dev/null 2>&1 || true
+
       - name: Собрать APK
         working-directory: android
         run: |
-          gradle assembleDebug --no-daemon --stacktrace
-          gradle assembleRelease --no-daemon --stacktrace
+          set +e
+          gradle assembleDebug assembleRelease --no-daemon --console=plain --stacktrace 2>&1 | tee /tmp/gradle.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            echo "### Ошибка сборки" >> $GITHUB_STEP_SUMMARY
+            tail -60 /tmp/gradle.log >> $GITHUB_STEP_SUMMARY
+            grep -nE "error:|FAILURE|What went wrong|Caused by|Unsupported|Could not" /tmp/gradle.log | tail -25 | while IFS= read -r line; do
+              echo "::error title=Gradle::$line"
+            done
+            exit "$status"
+          fi
 
       - name: Переименовать
         run: |
@@ -53,6 +68,6 @@ jobs:
 
             `zweb.apk` — release-сборка, `zweb-debug.apk` — debug.
             По умолчанию приложение открывает https://frizovdanyash.github.io/zweb/ —
-            адрес меняется в самом приложении при первой ошибке загрузки.
+            адрес меняется в самом приложении при ошибке загрузки.
           files: apk/*.apk
           make_latest: true
