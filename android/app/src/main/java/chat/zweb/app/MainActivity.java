@@ -24,7 +24,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewAssetLoader;
+import androidx.webkit.WebViewAssetLoader;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
