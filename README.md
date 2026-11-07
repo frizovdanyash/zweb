@@ -58,8 +58,11 @@ PORT=80 node serve.js  # на 80-м порту
 
 ## Приложение для Android (APK)
 
-Готовый APK лежит в релизах: **[zWeb APK](https://github.com/frizovdanyash/zweb/releases/tag/apk-latest)** —
-скачайте `zweb.apk` и установите (нужно разрешить установку из неизвестных источников).
+> **Скачать: [zweb.apk](https://github.com/frizovdanyash/zweb/releases/download/apk-latest/zweb.apk)**
+> (2.7 МБ) — открыть на телефоне и разрешить установку из этого источника.
+
+Сборка также лежит в [релизе `apk-latest`](https://github.com/frizovdanyash/zweb/releases/tag/apk-latest)
+вместе с `zweb-debug.apk`.
 
 Это обёртка на WebView: иконка в лончере, без адресной строки, микрофон и камера
 для звонков, ссылки `t.me` открываются внутри. По умолчанию приложение открывает

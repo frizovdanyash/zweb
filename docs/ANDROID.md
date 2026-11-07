@@ -8,10 +8,9 @@
 
 ## Готовый APK
 
-**https://github.com/frizovdanyash/zweb/releases/tag/apk-latest**
-
-Там два файла: `zweb.apk` (release) и `zweb-debug.apk` (debug, ставится рядом с
-обычной версией). Пересобираются автоматически при каждом пуше в `main`.
+**[zweb.apk](https://github.com/frizovdanyash/zweb/releases/download/apk-latest/zweb.apk)** — release, 2.7 МБ.
+Рядом лежит `zweb-debug.apk` (debug, ставится рядом с обычной версией).
+Пересобираются автоматически при каждом пуше в `main`.
 
 Установка: скачать на телефон → открыть → разрешить установку из этого источника.
 
