@@ -10,3 +10,14 @@ certs
 coverage
 test-results
 playwright-report
+
+# Android
+android/.gradle
+android/build
+android/app/build
+android/local.properties
+apk/
+*.apk
+*.aab
+*.keystore
+*.jks

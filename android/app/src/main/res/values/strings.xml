@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">zWeb</string>
+    <string name="choose_server">Адрес zWeb</string>
+    <string name="choose_server_hint">Домен, на котором развёрнут zWeb. Нужен HTTPS.</string>
+    <string name="choose_server_use_default">Открыть zWeb</string>
+    <string name="choose_server_example">https://example.com/</string>
+    <string name="choose_server_bad_url">Адрес должен начинаться с https://</string>
+    <string name="need_microphone">Без доступа к микрофону звонки и голосовые недоступны</string>
+    <string name="no_app_for_link">Нет приложения для этой ссылки</string>
+</resources>

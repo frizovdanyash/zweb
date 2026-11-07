@@ -56,6 +56,19 @@ PORT=80 node serve.js  # на 80-м порту
 
 Корень публикации — папка `public/`, тип проекта — статика, сборка не нужна.
 
+## Приложение для Android (APK)
+
+Готовый APK лежит в релизах: **[zWeb APK](https://github.com/frizovdanyash/zweb/releases/tag/apk-latest)** —
+скачайте `zweb.apk` и установите (нужно разрешить установку из неизвестных источников).
+
+Это обёртка на WebView: иконка в лончере, без адресной строки, микрофон и камера
+для звонков, ссылки `t.me` открываются внутри. По умолчанию приложение открывает
+`https://frizovdanyash.github.io/zweb/`; если ваш zWeb развёрнут на другом домене,
+адрес меняется в самом приложении — при ошибке загрузки появится окошко ввода.
+
+APK пересобирается автоматически на каждый пуш в `main` (workflow «Сборка APK»),
+подробности — [docs/ANDROID.md](docs/ANDROID.md).
+
 ## Что внутри
 
 ### Основные
@@ -133,6 +146,7 @@ src/lib/zweb/markup.ts               CSS-переменные оформлени
 src/lib/zweb/start.ts                запуск всех функций после входа
 src/components/sidebarLeft/tabs/zweb экраны настроек
 src/scss/partials/_zweb.scss         стили форка
+android/                             Android-проект (WebView-обёртка → APK)
 public/                              готовая сборка: раздавайте её
 ```
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="zweb_background">#FF0B0613</color>
+    <color name="zweb_accent">#FF8B5CF6</color>
+    <color name="zweb_icon_background">#FF1A0F2E</color>
+    <color name="zweb_text">#FFF3EEFF</color>
+    <color name="zweb_text_muted">#FF9C93B8</color>
+</resources>

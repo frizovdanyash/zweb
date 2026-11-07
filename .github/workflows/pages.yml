@@ -1,4 +1,4 @@
-name: Deploy zWeb to GitHub Pages
+name: zWeb на GitHub Pages
 
 on:
   push:
@@ -23,11 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Upload the ready-made build
+      - name: Включить Pages
+        uses: actions/configure-pages@v5
+
+      - name: Загрузить готовую сборку
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
-      - name: Publish
+      - name: Опубликовать
         id: deployment
         uses: actions/deploy-pages@v4
