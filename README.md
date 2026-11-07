@@ -136,6 +136,16 @@ src/scss/partials/_zweb.scss         стили форка
 public/                              готовая сборка: раздавайте её
 ```
 
+## Как это выглядит
+
+<div align="center">
+
+<img src="screenshots/login-phone.jpg" width="720" alt="zWeb — вход по номеру телефона">
+<br><br>
+<img src="screenshots/login-mobile.jpg" width="300" alt="zWeb на телефоне">
+
+</div>
+
 ## Лицензия
 
 Код основан на [Telegram Web K](https://github.com/morethanwords/tweb) (Mozilla Public
