@@ -1,0 +1,9 @@
+# Запуск:  docker compose up -d     →  http://localhost:8080
+services:
+  zweb:
+    build: .
+    image: zweb:latest
+    container_name: zweb
+    restart: unless-stopped
+    ports:
+      - "8080:80"

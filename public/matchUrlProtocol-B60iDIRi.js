@@ -1,0 +1,3 @@
+//# allFunctionsCalledOnLoad
+var e=new Set([`javascript:`]);function t(t){if(!t)return null;try{let n=new URL(t).protocol;return e.has(n)?null:n}catch{return null}}var n=/[\t\n\r]/g,r=/^[\x00-\x20]*([a-z][a-z\d+\-.]*):/i;function i(e){let t=e?.replace(n,``).match(r);return t&&t[1].toLowerCase()+`:`}function a(t){let n=i(t);return n&&!e.has(n)?t:`https://`+t}function o(e){return e.protocol===`https:`||e.protocol===`http:`}export{t as n,a as r,o as t};
+//# sourceMappingURL=matchUrlProtocol-B60iDIRi.js.map
