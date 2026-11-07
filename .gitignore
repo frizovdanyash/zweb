@@ -21,3 +21,4 @@ apk/
 *.aab
 *.keystore
 *.jks
+android/app/src/main/assets/public

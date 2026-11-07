@@ -8,27 +8,27 @@
 
 ## Готовый APK
 
-**[zweb.apk](https://github.com/frizovdanyash/zweb/releases/download/apk-latest/zweb.apk)** — release, 2.7 МБ.
+**[zweb.apk](https://github.com/frizovdanyash/zweb/releases/download/apk-latest/zweb.apk)** — release, ~39 МБ.
 Рядом лежит `zweb-debug.apk` (debug, ставится рядом с обычной версией).
 Пересобираются автоматически при каждом пуше в `main`.
+
+Сборка zWeb вшита в APK: страница лежит в `assets/public` и отдаётся
+`WebViewAssetLoader` по адресу `https://appassets.androidplatform.net/assets/public/index.html`.
+Приложению не нужен внешний хостинг, домен и HTTPS — только интернет для Telegram.
 
 Установка: скачать на телефон → открыть → разрешить установку из этого источника.
 
 ## Адрес приложения
 
-По умолчанию используется `https://frizovdanyash.github.io/zweb/`. Он записан в
-`android/app/build.gradle`:
+По умолчанию открывается вшитая сборка:
 
 ```groovy
-resValue 'string', 'zweb_default_url', '"https://frizovdanyash.github.io/zweb/"'
+resValue 'string', 'zweb_default_url', '"https://appassets.androidplatform.net/assets/public/index.html"'
 ```
 
-Если zWeb развёрнут на другом домене, менять код не обязательно: при ошибке
-загрузки приложение показывает окно ввода адреса и запоминает его. Адрес должен
-начинаться с `https://`.
-
-Чтобы сменить адрес по умолчанию для всех сборок, поправьте строку выше и
-запушьте — APK пересоберётся сам.
+Хотите открывать свой развёрнутый zWeb — адрес меняется в самом приложении:
+при ошибке загрузки появляется окно ввода, значение запоминается. Либо поправьте
+строку выше и запушьте — APK пересоберётся сам.
 
 ## Сборка
 

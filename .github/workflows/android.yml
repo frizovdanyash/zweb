@@ -52,6 +52,18 @@ jobs:
           cp android/app/build/outputs/apk/release/app-release.apk apk/zweb.apk
           ls -lh apk
 
+      - name: Проверить, что сборка внутри APK
+        run: |
+          {
+            echo "### Содержимое APK"
+            echo ""
+            echo "\`index.html\` внутри: $(unzip -l apk/zweb.apk | grep -c 'assets/public/index.html')"
+            echo "Файлов сборки внутри: $(unzip -l apk/zweb.apk | grep -c 'assets/public/')"
+            echo "Размер: $(du -h apk/zweb.apk | cut -f1)"
+          } | tee -a $GITHUB_STEP_SUMMARY
+
+          unzip -l apk/zweb.apk | grep -q 'assets/public/index.html' || { echo "::error title=APK::index.html не попал в APK"; exit 1; }
+
       - uses: actions/upload-artifact@v4
         with:
           name: zweb-apk
