@@ -1,0 +1,130 @@
+=== df ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   68G   78G  47% /
+/dev/root       145G   68G   78G  47% /
+=== free ===
+               total        used        free      shared  buff/cache   available
+Mem:              15           7           3           0           5           8
+=== ошибки ===
+2789:AAPT additional parameters:
+=== хвост лога ===
+R.raw.tab_chats (0x7f0e013d) — fps=60, frames=6, mono=false
+R.raw.tab_colors_reverse (0x7f0e0141) — fps=60, frames=5, mono=false
+R.raw.utyan_streaming (0x7f0e0187) — fps=60, frames=180, mono=false
+R.raw.tsv_setup_monkey_peek (0x7f0e0176) — fps=60, frames=33, mono=false
+R.raw.swipe_disabled (0x7f0e0133) — fps=60, frames=30, mono=false
+R.raw.qr_matrix (0x7f0e00ea) — fps=60, frames=180, mono=false
+R.raw.msg_emoji_smiles (0x7f0e00a1) — fps=60, frames=60, mono=false
+R.raw.tsv_monkey_close (0x7f0e016d) — fps=60, frames=98, mono=false
+R.raw.swipe_read (0x7f0e0136) — fps=60, frames=35, mono=false
+R.raw.tab_article (0x7f0e013a) — fps=60, frames=16, mono=false
+R.raw.camera_outline (0x7f0e001d) — fps=60, frames=86, mono=false
+R.raw.photo_text_allign (0x7f0e00c4) — fps=60, frames=60, mono=false
+R.raw.tab_gift (0x7f0e0149) — fps=60, frames=17, mono=false
+R.raw.error (0x7f0e004b) — fps=60, frames=120, mono=false
+R.raw.contact_check (0x7f0e0035) — fps=60, frames=45, mono=false
+R.raw.gram (0x7f0e0067) — fps=60, frames=20, mono=false
+R.raw.name_hide (0x7f0e00a8) — fps=60, frames=20, mono=false
+R.raw.tab_poll_reverse (0x7f0e0152) — fps=60, frames=5, mono=false
+R.raw.sound_off (0x7f0e0108) — fps=60, frames=61, mono=false
+R.raw.tab_music_reverse (0x7f0e0150) — fps=60, frames=5, mono=false
+R.raw.tsv_setup_monkey_idle1 (0x7f0e0174) — fps=60, frames=30, mono=false
+R.raw.tab_sticker (0x7f0e0156) — fps=60, frames=17, mono=false
+R.raw.phone_flash_call (0x7f0e00ba) — fps=60, frames=64, mono=false
+R.raw.utyan_newborn (0x7f0e0182) — fps=60, frames=180, mono=false
+R.raw.star_stroke (0x7f0e011f) — fps=60, frames=180, mono=false
+R.raw.bt_to_speaker (0x7f0e000a) — fps=60, frames=60, mono=false
+R.raw.caption_hide (0x7f0e0021) — fps=60, frames=20, mono=false
+R.raw.bot_webview_sheet_to_cross (0x7f0e0009) — fps=60, frames=22, mono=false
+R.raw.utyan_empty (0x7f0e017e) — fps=60, frames=180, mono=false
+R.raw.msg_emoji_cat (0x7f0e009c) — fps=60, frames=60, mono=false
+R.raw.photo_eraser (0x7f0e00be) — fps=60, frames=30, mono=false
+R.raw.swipe_unread (0x7f0e0139) — fps=60, frames=36, mono=false
+R.raw.ic_boosts_replace (0x7f0e0071) — fps=60, frames=90, mono=false
+R.raw.stories_intro_go_to_next (0x7f0e0128) — fps=60, frames=39, mono=false
+R.raw.ic_save_to_gallery (0x7f0e0076) — fps=60, frames=65, mono=false
+R.raw.camera_flip (0x7f0e001a) — fps=60, frames=40, mono=false
+R.raw.addone_icon (0x7f0e0000) — fps=60, frames=120, mono=false
+R.raw.utyan_cache (0x7f0e017a) — fps=60, frames=180, mono=false
+R.raw.stories_intro_go_forward (0x7f0e0127) — fps=60, frames=38, mono=false
+R.raw.smile_to_gif (0x7f0e0102) — fps=60, frames=12, mono=false
+R.raw.tab_emoji (0x7f0e0143) — fps=60, frames=18, mono=false
+R.raw.gram_reverse (0x7f0e0068) — fps=60, frames=10, mono=false
+R.raw.permission_request_folder (0x7f0e00b5) — fps=60, frames=240, mono=false
+R.raw.speed_slow (0x7f0e0112) — fps=60, frames=72, mono=false
+R.raw.photo_blur (0x7f0e00bd) — fps=60, frames=30, mono=false
+R.raw.rate (0x7f0e00ed) — fps=60, frames=90, mono=false
+R.raw.gift (0x7f0e0060) — fps=60, frames=180, mono=false
+R.raw.ic_unpin (0x7f0e007b) — fps=60, frames=120, mono=false
+R.raw.swipe_delete (0x7f0e0132) — fps=60, frames=38, mono=false
+R.raw.import_progress (0x7f0e007f) — fps=60, frames=57, mono=false
+R.raw.timer_toast (0x7f0e0163) — fps=60, frames=41, mono=false
+R.raw.biz_clock (0x7f0e0003) — fps=60, frames=180, mono=false
+R.raw.topics_list (0x7f0e0166) — fps=60, frames=100, mono=false
+R.raw.safari_30 (0x7f0e00fb) — fps=60, frames=180, mono=false
+R.raw.tab_location (0x7f0e014b) — fps=60, frames=17, mono=false
+R.raw.swipe_mute (0x7f0e0134) — fps=60, frames=35, mono=false
+R.raw.caption_down (0x7f0e0020) — fps=60, frames=35, mono=false
+R.raw.silent_unmute (0x7f0e0101) — fps=60, frames=58, mono=false
+R.raw.voice_outlined2 (0x7f0e018d) — fps=60, frames=84, mono=false
+R.raw.chats_swipearchive (0x7f0e002e) — fps=60, frames=120, mono=false
+R.raw.windows_30 (0x7f0e01ac) — fps=60, frames=180, mono=false
+R.raw.ic_unban (0x7f0e0079) — fps=60, frames=120, mono=false
+R.raw.phone_dots (0x7f0e00b8) — fps=60, frames=60, mono=false
+R.raw.permission_request_location (0x7f0e00b6) — fps=60, frames=60, mono=false
+R.raw.large_lastseen (0x7f0e008b) — fps=60, frames=180, mono=false
+R.raw.chats_infotip (0x7f0e002d) — fps=60, frames=45, mono=false
+R.raw.tab_symbols (0x7f0e0158) — fps=60, frames=17, mono=false
+R.raw.star_premium_2 (0x7f0e0117) — fps=60, frames=50, mono=false
+R.raw.import_finish (0x7f0e007d) — fps=60, frames=120, mono=false
+R.raw.utyan_gigagroup (0x7f0e0181) — fps=60, frames=150, mono=false
+R.raw.giveaway_results (0x7f0e0066) — fps=60, frames=180, mono=false
+R.raw.transcribe (0x7f0e016a) — fps=60, frames=180, mono=false
+R.raw.bubble (0x7f0e000b) — fps=60, frames=180, mono=false
+R.raw.import_loop (0x7f0e007e) — fps=60, frames=180, mono=false
+R.raw.emoji_stars (0x7f0e004a) — fps=60, frames=180, mono=false
+R.raw.folder_share (0x7f0e005a) — fps=60, frames=91, mono=false
+R.raw.smile_to_sticker (0x7f0e0104) — fps=60, frames=12, mono=false
+R.raw.gift_crafting (0x7f0e0062) — fps=60, frames=47, mono=false
+R.raw.dartloop (0x7f0e003b) — fps=60, frames=90, mono=false
+R.raw.filter_new (0x7f0e004f) — fps=60, frames=120, mono=false
+R.raw.wallet_allset (0x7f0e01a0) — fps=60, frames=180, mono=false
+R.raw.photo_pen (0x7f0e00c1) — fps=60, frames=30, mono=false
+R.raw.tab_wallet_reverse (0x7f0e015b) — fps=60, frames=5, mono=false
+R.raw.speaker (0x7f0e010b) — fps=60, frames=34, mono=false
+R.raw.tsv_setup_monkey_idle2 (0x7f0e0175) — fps=60, frames=30, mono=false
+R.raw.fire_once (0x7f0e0055) — fps=60, frames=120, mono=false
+R.raw.transcribe_in (0x7f0e016b) — fps=60, frames=20, mono=false
+R.raw.tab_symbols_reverse (0x7f0e0159) — fps=60, frames=5, mono=false
+R.raw.voip_allow_talk (0x7f0e0192) — fps=60, frames=52, mono=false
+R.raw.forward (0x7f0e005b) — fps=60, frames=47, mono=false
+R.raw.speed_fast (0x7f0e0110) — fps=60, frames=75, mono=false
+R.raw.utyan_empty2 (0x7f0e017f) — fps=60, frames=180, mono=false
+R.raw.sun_outline (0x7f0e012f) — fps=60, frames=36, mono=false
+
+> Task :TMessagesProj_AppStandalone:generateAfatReleaseStringResourceIdsAsset
+Generated 11798 string resource IDs: /home/runner/work/zweb/zweb/TMessagesProj_AppStandalone/build/generated/stringResourceIds/afatRelease/assets/string_resource_ids.bin
+Size: 94388 bytes
+
+> Task :TMessagesProj_AppStandalone:mergeAfatReleaseAssets
+> Task :TMessagesProj_AppStandalone:compressAfatReleaseAssets
+> Task :TMessagesProj_AppStandalone:optimizeAfatReleaseResources
+> Task :TMessagesProj_AppStandalone:mergeAfatReleaseGlobalSynthetics
+> Task :TMessagesProj_AppStandalone:mergeDexAfatRelease
+> Task :TMessagesProj_AppStandalone:l8DexDesugarLibAfatRelease
+> Task :TMessagesProj_AppStandalone:compileAfatReleaseArtProfile
+> Task :TMessagesProj_AppStandalone:packageAfatRelease
+> Task :TMessagesProj_AppStandalone:createAfatReleaseApkListingFileRedirect
+> Task :TMessagesProj_AppStandalone:assembleAfatRelease
+> Task :TMessagesProj_AppStandalone:assembleRelease
+
+[Incubating] Problems report is available at: file:///home/runner/work/zweb/zweb/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 57m 52s
+326 actionable tasks: 326 executed
