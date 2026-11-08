@@ -78,6 +78,26 @@ jobs:
             exit "$code"
           fi
 
+      - name: Publish build log
+        if: always()
+        continue-on-error: true
+        run: |
+          {
+            echo "=== df ==="; df -h / /tmp | tail -3
+            echo "=== free ==="; free -g | head -2
+            echo "=== ошибки ==="
+            grep -nE "error:|error;|FAILURE|What went wrong|Caused by|No space left|Killed|OutOfMemory|AAPT|Execution failed" /tmp/build.log 2>/dev/null | tail -80
+            echo "=== хвост лога ==="
+            tail -120 /tmp/build.log 2>/dev/null
+          } > build-log.txt
+
+          git config user.name "zWeb CI"
+          git config user.email "ci@zweb.local"
+          git checkout -q -B build-logs
+          git add -f build-log.txt
+          git commit -q -m "build log" || true
+          git push -q -f origin build-logs || true
+
       - name: Collect APK
         run: |
           mkdir -p out
